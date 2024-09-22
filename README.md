@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The Backend custom Api Link - https://livetickerbackend-production.up.railway.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
