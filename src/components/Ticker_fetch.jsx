@@ -71,7 +71,7 @@ const StockTicker = () => {
           Live Ticker
         </div>
 
-        <div className="flex md:items-center items-center justify-center space-x-3 ml-5">
+        <div className="flex md:items-center text-base items-center justify-center space-x-3 ml-5">
           {/* Custom Dropdown for Currency */}
           <div className="mt-5">
             <CustomDropdown
@@ -91,14 +91,14 @@ const StockTicker = () => {
           </div>
 
           {/* Buy Button */}
-          <button className="bg-gray-700 p-2 rounded-2xl text-white font-sans text-lg md:text-xl mb-1 mt-5">
+          <button className="bg-gray-700 p-2 rounded-2xl text-white font-sans text-base md:text-xl mb-1 mt-5">
             BUY {selectedCrypto}
           </button>
         </div>
 
         <div className="flex space-x-3 justify-end">
           {/* Connect Button */}
-          <button className="flex bg-cyan-600 p-2 rounded-lg text-white font-raleway mb-7 text-sm ">
+          <button className="flex bg-cyan-600 p-2 rounded-lg text-white font-raleway mb-7 text-xs ">
             Connect Telegram
           </button>
 
@@ -128,7 +128,7 @@ const StockTicker = () => {
       <div className="text-center p-2 mt-3 sm:ml-0 md:ml-10 w-full text-gray-500 font-mono text-base md:text-sm">
         Best Price To Trade
       </div>
-      <div className="text-center px-2 text-5xl sm:ml-0 md:ml-10 w-full sm:text-4xl md:text-5xl text-white font-thin">
+      <div className="text-center px-2 text-3xl sm:ml-0 md:ml-10 w-full sm:text-4xl md:text-5xl text-white font-thin">
         <h1>
           {btcInr ? (
             <p>
@@ -149,24 +149,22 @@ const StockTicker = () => {
       <div className="flex justify-center min-h-screen p-4">
         <ul className="w-full max-w-7xl bg-inherit shadow-lg rounded-lg">
           <li className="bg-inherit text-gray-500 p-4 rounded-t-lg flex flex-items font-raleway space-x-1">
-            <span className="w-1/12 text-center text-base md:text-xl">#</span>
-            <span className="w-3/12 text-base md:text-xl text-center">
-              Name
-            </span>
-            <span className="w-2/5 text-base md:text-xl text-center">
+            <span className="w-1/12 text-center text-sm md:text-xl">#</span>
+            <span className="w-3/12 text-sm md:text-xl text-center">Name</span>
+            <span className="w-2/5 text-sm md:text-xl text-center">
               Last Traded Price
             </span>
-            <span className="w-3/6 text-base md:text-xl text-center">
+            <span className="w-3/6 text-sm md:text-xl text-center">
               High / Low Price
             </span>
-            <span className="w-3/12 text-base md:text-xl text-center">
+            <span className="w-3/12 text-sm md:text-xl text-center">
               Difference
             </span>
           </li>
           {tickers.map((ticker, index) => (
             <li
               key={index}
-              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-2 p-4 flex items-center text-white text-base md:text-xl group"
+              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-2 p-4 flex items-center text-white text-sm md:text-xl group"
             >
               <span className="w-1/12 text-center font-thin group-hover:font-light">
                 {index + 1}
