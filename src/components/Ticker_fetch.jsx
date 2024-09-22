@@ -148,7 +148,7 @@ const StockTicker = () => {
 
       <div className="flex justify-center min-h-screen p-4">
         <ul className="w-full max-w-7xl bg-inherit shadow-lg rounded-lg">
-          <li className="bg-inherit text-gray-500 p-4 rounded-t-lg flex flex-items font-raleway space-x-1">
+          <li className="bg-inherit text-gray-500 p-4 rounded-t-lg flex flex-items font-raleway space-x-1 -mb-1">
             <span className="w-1/12 text-center text-sm md:text-xl">#</span>
             <span className="w-3/12 text-sm md:text-xl text-center">Name</span>
             <span className="w-2/5 text-sm md:text-xl text-center">
