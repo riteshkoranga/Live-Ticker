@@ -21,7 +21,7 @@ const StockTicker = () => {
         const response = await axios.get(
           "https://livetickerbackend-production.up.railway.app/"
         );
-
+        //removed localhost
         const data = response.data;
         console.log(data);
 
