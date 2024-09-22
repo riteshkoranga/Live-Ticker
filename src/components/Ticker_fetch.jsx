@@ -50,21 +50,25 @@ const StockTicker = () => {
 
   if (error)
     return (
-      <div className="text-center font-mono mt-52 text-gray-400 text-2xl sm:mt-20 sm:text-xl">
+      <div className="text-center font-mono mt-52 sm:mt-20 mt-16 text-gray-400 text-lg sm:text-xl md:text-2xl">
         Error fetching data: {error.message}
       </div>
     );
   if (tickers.length === 0)
     return (
-      <div className="flex items-center justify-center h-screen ">
-        <div className="text-gray-400 p-4 text-4xl font-mono">Loading...</div>
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-gray-400 p-4 text-2xl sm:text-4xl font-mono">
+          Loading...
+        </div>
       </div>
     );
 
   return (
     <div className="p-3">
       <div className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-1">
-        <div className="text-5xl text-cyan-600 font-raleway">Live Ticker</div>
+        <div className="text-3xl md:text-5xl text-cyan-600 font-raleway">
+          Live Ticker
+        </div>
 
         <div className="flex md:items-center space-x-7 ml-5">
           {/* Custom Dropdown for Currency */}
@@ -86,15 +90,15 @@ const StockTicker = () => {
           </div>
 
           {/* Buy Button */}
-          <button className="bg-gray-700 p-2 rounded-2xl text-white  font-sans text-xl mb-1 mt-5">
+          <button className="bg-gray-700 p-2 rounded-2xl text-white font-sans text-lg md:text-xl mb-1 mt-5">
             BUY {selectedCrypto}
           </button>
         </div>
 
         <div className="flex space-x-3">
           {/* Connect Button */}
-          <button className=" flex  bg-cyan-600 p-2 rounded-lg text-white font-raleway mb-7 text-sm ">
-            Connect telegram
+          <button className="flex bg-cyan-600 p-2 rounded-lg text-white font-raleway mb-7 text-sm">
+            Connect Telegram
           </button>
 
           {/* Sliding Toggle */}
@@ -111,7 +115,7 @@ const StockTicker = () => {
               }`}
             >
               <div
-                className={`w-4 h-4 bg-white items-center rounded-full shadow-md transform transition-transform ${
+                className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform ${
                   isConnected ? "translate-x-6" : ""
                 }`}
               ></div>
@@ -120,20 +124,20 @@ const StockTicker = () => {
         </div>
       </div>
 
-      <div className="text-center p-2 mt-3 sm:ml-0 md:ml-10 w-full text-gray-500 font-mono">
+      <div className="text-center p-2 mt-3 sm:ml-0 md:ml-10 w-full text-gray-500 font-mono text-xs md:text-sm">
         Best Price To Trade
       </div>
-      <div className="text-center px-2 sm:ml-0 md:ml-10 w-full sm:text-5xl md:text-5xl text-white font-thin">
+      <div className="text-center px-2 sm:ml-0 md:ml-10 w-full sm:text-4xl md:text-5xl text-white font-thin">
         <h1>
           {btcInr ? (
             <p>
               &#8377;{" "}
               {new Intl.NumberFormat("en-IN", {
-                maximumFractionDigits: 2, // Show up to 2 decimal places if needed
+                maximumFractionDigits: 2,
               }).format(btcInr)}
             </p>
           ) : (
-            <p className="font-thin text-xl text-white">Loading...</p>
+            <p className="font-thin text-lg text-white">Loading...</p>
           )}
         </h1>
       </div>
@@ -144,16 +148,22 @@ const StockTicker = () => {
       <div className="flex justify-center min-h-screen p-4">
         <ul className="w-full max-w-7xl bg-inherit shadow-lg rounded-lg">
           <li className="bg-inherit text-gray-500 p-4 rounded-t-lg flex flex-items font-raleway">
-            <span className="w-1/12 text-center text-xl">#</span>
-            <span className="w-3/12 text-xl text-center">Name</span>
-            <span className="w-2/5 text-xl text-center">Last Traded Price</span>
-            <span className="w-3/6 text-xl text-center">High / Low Price</span>
-            <span className="w-3/12 text-xl text-center">Difference</span>
+            <span className="w-1/12 text-center text-lg md:text-xl">#</span>
+            <span className="w-3/12 text-lg md:text-xl text-center">Name</span>
+            <span className="w-2/5 text-lg md:text-xl text-center">
+              Last Traded Price
+            </span>
+            <span className="w-3/6 text-lg md:text-xl text-center">
+              High / Low Price
+            </span>
+            <span className="w-3/12 text-lg md:text-xl text-center">
+              Difference
+            </span>
           </li>
           {tickers.map((ticker, index) => (
             <li
               key={index}
-              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-2 p-4 flex items-center text-white text-xl group"
+              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-2 p-4 flex items-center text-white text-lg md:text-xl group"
             >
               <span className="w-1/12 text-center font-thin group-hover:font-light">
                 {index + 1}
@@ -164,36 +174,34 @@ const StockTicker = () => {
               <span className="w-2/5 text-center font-thin group-hover:font-light">
                 &#8377;{" "}
                 {new Intl.NumberFormat("en-IN", {
-                  maximumFractionDigits: 2, // Show up to 2 decimal places if needed
+                  maximumFractionDigits: 2,
                 }).format(ticker.last)}
               </span>
               <span className="w-3/6 text-center font-thin group-hover:font-light">
                 &#8377;{" "}
                 {new Intl.NumberFormat("en-IN", {
-                  maximumFractionDigits: 3, // Show up to 2 decimal places if needed
+                  maximumFractionDigits: 3,
                 }).format(ticker.high)}
                 {"  "} / &#8377;{" "}
                 {new Intl.NumberFormat("en-IN", {
-                  maximumFractionDigits: 3, // Show up to 2 decimal places if needed
+                  maximumFractionDigits: 3,
                 }).format(ticker.low)}
               </span>
               <span
                 className={`w-3/12 text-center font-thin group-hover:font-light ${
-                  ticker.low > 0 // Check if the low value is greater than 0
-                    ? // Calculate the percentage change
-                      (((ticker.high - ticker.low) / ticker.low) * 100).toFixed(
+                  ticker.low > 0
+                    ? (((ticker.high - ticker.low) / ticker.low) * 100).toFixed(
                         2
                       ) >= 0
-                      ? "text-green-400" // If positive change, apply green text color
-                      : "text-red-700" // If negative change, apply red text color
-                    : "text-gray-500" // Default color when low is 0 or less
+                      ? "text-green-400"
+                      : "text-red-700"
+                    : "text-gray-500"
                 }`}
               >
                 {ticker.low > 0
-                  ? // Display the percentage change if low is greater than 0
-                    (((ticker.high - ticker.low) / ticker.low) * 100).toFixed(2)
+                  ? (((ticker.high - ticker.low) / ticker.low) * 100).toFixed(2)
                   : 0}{" "}
-                {/* If low is 0 or less, display 0 */}%
+                %
               </span>
             </li>
           ))}
