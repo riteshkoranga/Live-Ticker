@@ -91,7 +91,7 @@ const StockTicker = () => {
           </div>
 
           {/* Buy Button */}
-          <button className="bg-gray-700 p-2 rounded-2xl text-white font-sans text-base md:text-xl mb-1 mt-5">
+          <button className="bg-gray-700 p-2 rounded-2xl hover:bg-gray-800 text-white font-sans text-base md:text-xl mb-1 mt-5">
             BUY {selectedCrypto}
           </button>
         </div>
