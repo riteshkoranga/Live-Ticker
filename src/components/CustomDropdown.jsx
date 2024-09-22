@@ -12,7 +12,7 @@ const CustomDropdown = ({ options, selected, onSelect }) => {
     <div className="relative inline-block w-full">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center bg-gray-700 text-white p-2 text-center rounded-2xl text-xl mb-1 outline-none font-sans hover:bg-gray-800 w-full"
+        className="flex items-center bg-gray-700 text-white p-2 text-center rounded-2xl text-base md:text-xl mb-1 outline-none font-sans hover:bg-gray-800 w-full"
       >
         <span className="flex-grow text-center">{selected}</span>
         {/* Dropdown icon */}
@@ -39,7 +39,7 @@ const CustomDropdown = ({ options, selected, onSelect }) => {
               key={option}
               href="#"
               onClick={() => handleSelect(option)}
-              className="block px-4 py-2 text-xl text-white hover:bg-gray-700 rounded-2xl"
+              className="block px-4 py-2 text-base md:text-xl text-white hover:bg-gray-700 rounded-2xl"
             >
               {option}
             </a>

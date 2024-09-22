@@ -164,7 +164,7 @@ const StockTicker = () => {
           {tickers.map((ticker, index) => (
             <li
               key={index}
-              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-2 p-4 flex items-center text-white text-sm md:text-xl group"
+              className="bg-gray-700 hover:bg-gray-800 rounded-lg my-1 md:my-2 p-4 flex items-center text-white text-xs md:text-xl group"
             >
               <span className="w-1/12 text-center font-thin group-hover:font-light">
                 {index + 1}
