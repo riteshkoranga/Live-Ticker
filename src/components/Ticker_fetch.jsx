@@ -139,47 +139,6 @@ const StockTicker = () => {
         Average BTC/INR price new including commission
       </h4>
 
-      {/* <div className="flex justify-center min-h-screen p-4">
-        <table className="w-full max-w-4xl table-auto bg-inherit shadow-lg rounded-lg">
-          <thead>
-            <tr className=" text-gray-100 text-xl text-left mb-2">
-              <th className="p-4">#</th>
-              <th className="p-4">Name</th>
-              <th className="p-4">Last Traded Price</th>
-              <th className="p-4">High / Low Price</th>
-              <th className="p-4">Difference</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tickers.map((ticker, index) => (
-              <tr key={index}>
-                <td colSpan="5" className="p-1">
-                  <div className="bg-gray-100 border border-gray-300 hover:bg-gray-200 rounded-lg p-4 -mt-6">
-                    <div className="grid grid-cols-5 ">
-                      <span className="w-3 text-center">{index + 1}</span>
-                      <span className="w-3">{ticker.name}</span>
-                      <span className="w-2/12">{ticker.last}</span>
-                      <span className="w-3/12">
-                        {ticker.high}/{ticker.low}
-                      </span>
-                      <span className="w-3/12">
-                        {ticker.low > 0
-                          ? (
-                              ((ticker.high - ticker.low) / ticker.low) *
-                              100
-                            ).toFixed(2)
-                          : 0}
-                        %
-                      </span>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
-
       <div className="flex justify-center min-h-screen p-4">
         <ul className="w-full max-w-7xl bg-inherit shadow-lg rounded-lg">
           <li className="bg-inherit text-gray-500 p-4 rounded-t-lg flex flex-items font-raleway">
