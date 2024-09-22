@@ -103,7 +103,7 @@ const StockTicker = () => {
           </button>
 
           {/* Sliding Toggle */}
-          <label className="flex mt-2">
+          <label className="flex mt-2 text-sm">
             <input
               type="checkbox"
               className="hidden"
