@@ -18,8 +18,10 @@ const StockTicker = () => {
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/");
-        //"https://livetickerbackend-production.up.railway.app/"
+        const response = await axios.get(
+          "https://livetickerbackend-production.up.railway.app/"
+        );
+
         const data = response.data;
         console.log(data);
 
